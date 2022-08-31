@@ -2,11 +2,19 @@
 
 namespace App\Controller;
 
-class IndexController implements ControllerInterface
+use App\Test\Test;
+
+class IndexController
 {
 
-    public function run()
+    public function __construct()
     {
-        echo "Hello IndexController";
     }
+
+    public function run(Test $test): void
+    {
+        var_dump($test->hello());
+    }
+
+
 }

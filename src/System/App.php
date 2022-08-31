@@ -7,10 +7,10 @@ use App\Manager\ControllerManager;
 class App
 {
 
-    private static $_instance = null;
+    private static ?App $_instance = null;
 
 
-    public static function instance(): App
+    public static function instance(): ?App
     {
         if (is_null(self::$_instance)) {
             self::$_instance = new App();
@@ -23,10 +23,10 @@ class App
     {
     }
 
-    public function run()
+    public function getInstance(ControllerManager $manager)
     {
-        $controllerManager = new ControllerManager();
-        return $controllerManager->getControllerName()->run();
+
+        return $manager->getControllerName();
     }
 
 }

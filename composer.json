@@ -9,9 +9,8 @@
     }
   },
   "minimum-stability": "dev",
-  "require-dev": {
-  },
   "require": {
-    "ext-pdo": "*"
+    "ext-pdo": "*",
+    "php-di/php-di": "dev-master"
   }
 }
